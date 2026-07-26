@@ -60,7 +60,6 @@ NetworkManager exposes Wi-Fi access points through `nm_device_wifi_get_access_po
 | Event loop | `NmEventPump` |
 | Build | CMake, TDE macros |
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for class layout and development phases.
 See [LOGIC.md](LOGIC.md) for sequence and state diagrams of the applet's logic.
 
 ## References

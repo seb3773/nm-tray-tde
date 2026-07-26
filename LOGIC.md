@@ -123,19 +123,19 @@ To prevent the open menu from "flickering" or unexpectedly closing when the Wi-F
 
 ```mermaid
 flowchart TD
-    A[NM Signal: AP state change] --> B[NmData::refresh()]
-    B --> C[TrayController::scheduleMainMenuUpdate()]
-    C --> D{Is the menu open?}
+    A[NM Signal: AP state change] --> B["NmData::refresh()"]
+    B --> C["TrayController::scheduleMainMenuUpdate()"]
+    C --> D{"Is the menu open?"}
     
     D -- No --> E[End]
-    D -- Yes --> F[TrayController::onMainMenuUpdateTimeout()]
+    D -- Yes --> F["TrayController::onMainMenuUpdateTimeout()"]
     
-    F --> G{Is the Saved Networks submenu open?}
+    F --> G{"Is the Saved Networks submenu open?"}
     G -- Yes --> H[Defer update 100ms Timer]
     G -- No --> I[Calculate mainMenuFingerprint]
     
-    I --> J{Has the fingerprint changed?<br/>New networks, disappearance, state change}
+    I --> J{"Has the fingerprint changed?<br/>New networks, disappearance, state change"}
     
-    J -- Yes --> K[NmTrayPopup::rebuild() <br/> Rebuild the entire menu]
-    J -- No --> L[NmTrayPopup::refreshWifiSignalLevels() <br/> Update signal bars in-place]
+    J -- Yes --> K["NmTrayPopup::rebuild() <br/> Rebuild the entire menu"]
+    J -- No --> L["NmTrayPopup::refreshWifiSignalLevels() <br/> Update signal bars in-place"]
 ```
