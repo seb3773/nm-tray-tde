@@ -31,10 +31,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Os -flto=auto -fstrict-aliasing -ffunct
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os -flto=auto -fstrict-aliasing -ffunction-sections -fdata-sections -fno-ident -fno-plt -fomit-frame-pointer -fno-stack-protector -fno-math-errno -fvisibility=hidden -fno-unwind-tables -fno-asynchronous-unwind-tables -Wno-deprecated-declarations")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-O1 -Wl,--gc-sections -Wl,--as-needed -s")
 
-option(BUILD_TOOLS "Build development tools (nm-probe, test-tray)" ON)
-
 add_subdirectory(src)
-
-if(BUILD_TOOLS)
-    add_subdirectory(tools)
-endif()

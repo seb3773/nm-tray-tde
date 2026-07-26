@@ -78,5 +78,3 @@ Requires a Trinity Desktop session (`/opt/trinity` or `TDE_PREFIX`), `libnm-dev`
 
 The applet is built as a **single executable** (no `libtdeinit_*.so` kdeinit split).
 
-Helper tools: `build/tools/nm-probe`, `build/tools/test-tray`.
-
