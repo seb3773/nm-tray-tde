@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=nm-tray-tde
+Icon=network-wired
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+X-TDE-autostart-condition=nmtrayrc:General:Autostart:true
+OnlyShowIn=TDE;Trinity;
+Name=nm-tray-tde

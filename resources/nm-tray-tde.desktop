@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=nm-tray-tde
+Icon=network-wired
+Name=nm-tray-tde
+Comment=NetworkManager tray applet for Trinity
+Categories=System;Network;
+OnlyShowIn=TDE;Trinity;
+X-TDE-UniqueApplet=true
